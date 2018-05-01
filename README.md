@@ -21,14 +21,18 @@ to a github repo.
 * Under the directory `tests`, edit the file given so that it contains the unit tests that you want to be used as a basis
    for the student's graded.   Use the decorators from the Gradescope 
    provided module 
-   [autograder_utils](https://github.com/gradescope/gradescope-utils/tree/master/gradescope_utils/autograder_utils).  As a 
-   quick reference, here are examples of those decorators:
-   namely:
+   [autograder_utils](https://github.com/gradescope/gradescope-utils/tree/master/gradescope_utils/autograder_utils).  
    
-   * `@weight(5.0)` (parameter is of type float; represents number of points)
-   * `@tags("conditionals", "recursion")` (parameters are strings)
-   * `@visibility("after_due_date")` (legal values are `"hidden"`, `"after_due_date"`, `"after_published"`
-      and `"visible"` (default).  They are explained further
-      [in Gradescope's documentation](https://gradescope-autograders.readthedocs.io/en/latest/specs/#controlling-test-case-visibility)
+# Decorator reference
 
+As quick reference, here are examples of the decorators you can use on `unittest` tests:
+   
+* `@weight(5.0)` (parameter is of type float; represents number of points)
+* `@tags("conditionals", "recursion")` (parameters are strings)
+* `@visibility("after_due_date")` Legal values are explained [in Gradescope's documentation](https://gradescope-autograders.readthedocs.io/en/latest/specs/#controlling-test-case-visibility)
+   * `"hidden"`
+   * `"after_due_date"`
+   * `"after_published"`
+   * `"visible"` (default).  
+   
    
