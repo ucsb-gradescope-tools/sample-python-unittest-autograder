@@ -35,8 +35,19 @@ to a github repo.
    for the student's graded.   Use the decorators from the Gradescope 
    provided module 
    [autograder_utils](https://github.com/gradescope/gradescope-utils/tree/master/gradescope_utils/autograder_utils).  (Quick reference below.)
-   
-## Step 3: Create an `Autograder.zip` using the [link-gs-zip-with-repo](https://github.com/ucsb-gradescope-tools/link-gs-zip-with-repo) tool.
+
+## Step 3: Test your autograder locally (optional)
+
+To test your autograder locally, try putting a correct sample solution in the SAMPLE-SOLUTION-1 directory and an incorrect sample solution in the SAMPLE-SOLUTION-2 directory.  (You have the option of creating additional SAMPLE-SOLUTION-nn directories, as few or as many as you see fit if you want to test a wider range of solution possibilities.)
+
+To check what will happen, run:
+* `./grade.sh SAMPLE-SOLUTION-1`
+* `./grade.sh SAMPLE-SOLUTION-2` 
+* etc.
+
+In each case, look at the file `results.json` to see whether it reflects what you expect the resulting grade to be.   
+
+## Step 4: Create an `Autograder.zip` using the [link-gs-zip-with-repo](https://github.com/ucsb-gradescope-tools/link-gs-zip-with-repo) tool.
    
 * Clone the [link-gs-zip-with-repo](https://github.com/ucsb-gradescope-tools/link-gs-zip-with-repo).
 * In that repo, edit `env.sh` to point to your repo.  You don't need to commit that change.
