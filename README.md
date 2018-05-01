@@ -45,6 +45,8 @@ To check what will happen, run:
 * `./grade.sh SAMPLE-SOLUTION-2` 
 * etc.
 
+(When converting assignments from UCSB's submit.cs, you might adapt a "perfect" solution and a "flawed" solution from among previous student submissions, by looking at the grade assigned by submit.cs)
+
 In each case, look at the file `results.json` to see whether it reflects what you expect the resulting grade to be.   
 
 ## Step 4: Create an `Autograder.zip` using the [link-gs-zip-with-repo](https://github.com/ucsb-gradescope-tools/link-gs-zip-with-repo) tool.
