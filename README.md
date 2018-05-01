@@ -16,6 +16,8 @@ to a github repo.
 
 * Create a new empty private repo, e.g. with the name PRIVATE-cs8-s18-labxx-gs
 * Clone the empty repo with `git clone <url>`
+*  `cd` into that directory:
+   > `cd PRIVATE-cs8-s18-labxx-gs`
 * Add a remote for this sample repo via: 
    > `git remote add template git@github.com:ucsb-gradescope-tools/sample-python-unittest-autograder.git`
 * Pull from this sample repo via `git pull template master`
