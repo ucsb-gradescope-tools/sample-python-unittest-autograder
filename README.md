@@ -31,23 +31,35 @@ to a github repo.
    If you prefer *all* files to be copied in, edit the `grade.sh` script to copy all files from `/autograder/submission` into
    the target directory.
    
-* Under the directory `tests`, edit the file given so that it contains the unit tests that you want to be used as a basis
+* In EXECUTION-FILES, under the directory `tests`, edit the file given so that it contains the unit tests that you want to be used as a basis
    for the student's graded.   Use the decorators from the Gradescope 
    provided module 
    [autograder_utils](https://github.com/gradescope/gradescope-utils/tree/master/gradescope_utils/autograder_utils).  (Quick reference below.)
 
+   If converting from submit.cs, put any files that were under EXECUTION-FILES on submit.cs that are needed
+   for your tests.
+
+* Optional: If converting from submit.cs, if there are BUILD-FILES in the submit.cs solution, store them
+   under BUILD-FILES.
+
 ## Step 3: Test your autograder locally (optional)
 
-To test your autograder locally, try putting a correct sample solution in the SAMPLE-SOLUTION-1 directory and an incorrect sample solution in the SAMPLE-SOLUTION-2 directory.  (You have the option of creating additional SAMPLE-SOLUTION-nn directories, as few or as many as you see fit if you want to test a wider range of solution possibilities.)
+To test your autograder locally, try putting a correct sample solution
+in the `SAMPLE-SOLUTION-1` directory and an incorrect sample solution in
+the `SAMPLE-SOLUTION-2` directory.  (You have the option of creating
+additional `SAMPLE-SOLUTION-nn` directories, as few or as many as you
+see fit if you want to test a wider range of solution possibilities.)
 
 To check what will happen, run:
 * `./grade.sh SAMPLE-SOLUTION-1`
 * `./grade.sh SAMPLE-SOLUTION-2` 
 * etc.
 
-(When converting assignments from UCSB's submit.cs, you might adapt a "perfect" solution and a "flawed" solution from among previous student submissions, by looking at the grade assigned by submit.cs)
 
-In each case, look at the file `results.json` to see whether it reflects what you expect the resulting grade to be.   
+
+(When converting assignments from UCSB's submit.cs, you might adapt a "perfect" solution and a "flawed" solution from among previous student submissions, by looking at the grade assigned by submit.cs.)
+
+In each case, look at the file `MAKE-STUDENT-OUTPUT/results.json` to see whether it reflects what you expect the resulting grade to be.   
 
 ## Step 4: Create an `Autograder.zip` using the [link-gs-zip-with-repo](https://github.com/ucsb-gradescope-tools/link-gs-zip-with-repo) tool.
    
