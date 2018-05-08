@@ -17,6 +17,21 @@ else
    exit
 fi
 
+copy_files_from_dir_if_it_exists () {
+    if [ -d $1 ]; then
+        cp -rv $1/* .
+    fi
+}
+
+/bin/rm -rf MAKE-STUDENT-OUTPUT
+mkdir -p MAKE-STUDENT-OUTPUT
+
+cd MAKE-STUDENT-OUTPUT
+
+copy_files_from_dir_if_it_exists ../EXECUTION-FILES
+copy_files_from_dir_if_it_exists ../BUILD-FILES
+
+
 for f in $EXPECTED_FILES; do
     if [ -f $SUBMISSION_SOURCE/$f ]; then
         cp -v $SUBMISSION_SOURCE/$f .
@@ -31,3 +46,5 @@ python3 run_tests.py > results.json
 if [ -d /autograder/results ]; then
     cp -v results.json /autograder/results
 fi
+
+cd ..
